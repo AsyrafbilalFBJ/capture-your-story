@@ -95,9 +95,11 @@ export default class HomePage {
         if(result.isConfirmed){
           await this.#presenter.clearCache();
           await Swal.fire({
-            title : "Cache telah terhapus",
-            text : "Data di lokal sudah terhapus.",
-            icon : "success"
+            title : "Data local Story telah terhapus",
+            text : "Hubungkan ke internet untuk mendapatkan data terbaru!",
+            icon : "success",
+            iconColor: "#469D89",
+            confirmButtonColor : "#469D89",
           });
         } else {
           console.log('Cache clear cancelled by user.');
